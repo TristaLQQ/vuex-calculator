@@ -1,37 +1,11 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/TristaLQQ/vuex-calculator/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/TristaLQQ/vuex-calculator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+这个项目是结合webpack来做的。具体的运行方法如下：
+ 1.需要确保安装好node,查看是否安装，在命令行中输入:node -v,node自带npm,后面的一系列都需要使用命令npm,当然也可以使用淘宝镜像，cnpm。具体的镜像的安装方法：npm install cnpm -g。
+ 2、项目的结构没有自己全部手工搭建，而是借助了vue-cli脚手架工具。这个也要确保安装上了,安装方法：cnpm install vue-cli -g  全局安装
+ 
+ 3、开始搭建项目： vue init webpack-simple 文件名
+ 4、cd 文件名
+ 5、cnpm install   安装依赖
+ 6、npm run dev  运行项目
+ 3/4/5/6是常规的运行vue项目，而这个还需要你手动去安装 cnpm install vuex -D 和  cnpm install babel-preset-stage-3 -D;
+ 7、运行的时候看还缺什么依赖没有的，就依次的安装就好了，比如如果还想使用bootstrap的样式之类的话，就还需要安装bootstrap,style-loader;
+   注意：代码中使用vuex用了两种方法：一个是直接注入到根实例当中，也就是new Vue({..})这里面儿；另外一个就是使用vuex提供的mapState函数，把state直接映射到组件当中。两种我都有写，不过其中一种被我注释起来了。注意运行的时候修改一下就ok了。
